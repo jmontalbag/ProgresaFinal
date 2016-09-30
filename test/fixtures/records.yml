@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  beneficiary: one
+  state: one
+  objective: one
+
+two:
+  user: two
+  beneficiary: two
+  state: two
+  objective: two

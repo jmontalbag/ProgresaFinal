@@ -1,0 +1,32 @@
+<%= form_for(objective) do |f| %>
+  <% if objective.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(objective.errors.count, "error") %> prohibited this objective from being saved:</h2>
+
+      <ul>
+      <% objective.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :texto %>
+    <%= f.text_area :texto %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zone_id %>
+    <%= f.text_field :zone_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :classification_id %>
+    <%= f.text_field :classification_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
