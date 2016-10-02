@@ -1,5 +1,17 @@
-<h1>New Beneficiary</h1>
+<% content_for :content_header do %>
+    <section class="content-header">
+    	<h1>Nuevo <small>Beneficiario</small></h1>
+        <ol class="breadcrumb">
+    	    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><%= link_to "Beneficiarios", beneficiaries_path %></li>
+            <li class="active">Nuevo</li>
+        </ol>
+    </section>
+<% end %>
+<div class="form-group">
+	<h1>Crea un Beneficiario</h1>
+</div>
+
 
 <%= render 'form', beneficiary: @beneficiary %>
 
-<%= link_to 'Back', beneficiaries_path %>

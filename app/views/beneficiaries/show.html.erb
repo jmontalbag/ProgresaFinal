@@ -1,24 +1,45 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datos Beneficiario</title>
+</head>
+<body>
+	<div class="container">
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @beneficiary.nombre %>
-</p>
+	    <h1>Datos Beneficiario</h1>
+	    <br>
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @beneficiary.apellido %>
-</p>
+		<p>
+          <div class="field">
+  	      <strong>Nombre: </strong>
+  	      <%= @beneficiary.nombre %>
+          </div>
+        </p>
 
-<p>
-  <strong>Rut:</strong>
-  <%= @beneficiary.rut %>
-</p>
+        <p>
+          <div class="field">
+          <strong>Apellido:</strong>
+          <%= @beneficiary.apellido %>
+          </div>
+        </p>
 
-<p>
-  <strong>Fecha nac:</strong>
-  <%= @beneficiary.fecha_nac %>
-</p>
+        <p>
+          <div class="field">
+          <strong>Rut:</strong>
+          <%= @beneficiary.rut %>
+          </div>
+        </p>
 
-<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> |
-<%= link_to 'Back', beneficiaries_path %>
+        <p>
+        <div class="field">
+         <strong>Fecha nac:</strong>
+         <%= @beneficiary.fecha_nac %>
+         </div>
+        </p>
+
+        <%= link_to 'Editar', edit_beneficiary_path(@beneficiary) %> |
+        <%= link_to 'Volver', beneficiaries_path %>
+	</div>
+</body>
+</html>

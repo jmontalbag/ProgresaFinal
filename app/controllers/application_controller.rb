@@ -10,4 +10,13 @@ class ApplicationController < ActionController::Base
   	devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:nombre, :email, :password, :current_password, :rol_id) }
   end
 
+  private
+  def manejo_vista_admin
+    if devise_controller?
+      "login"
+    else
+      "application"
+    end
+end
+
 end
