@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label :zone_id %>
-    <%= f.text_field :zone_id %>
+     <%= collection_select( :objective, :zone_id, Zone.all, :id, :nombre, { :multiple => false }, { :class => "my-custom-class" } ) %>
   </div>
 
   <div class="field">
     <%= f.label :classification_id %>
-    <%= f.text_field :classification_id %>
+    <%= collection_select( :objective, :classification_id, Classification.all, :id, :nombre, { :multiple => false }, { :class => "my-custom-class" } ) %>
   </div>
 
   <div class="actions">
