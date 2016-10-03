@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Datos Beneficiario</title>
-</head>
-<body>
-<div class="container">
 
+<table>
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>User:</strong>
-  <%= @record.user %>
+  <%= @record.user.to_s %>
 </p>
 
 <p>
   <strong>Beneficiary:</strong>
-  <%= @record.beneficiary %>
+  <%= @record.beneficiary.to_s %>
 </p>
 
 <p>
   <strong>State:</strong>
-  <%= @record.state %>
+  <%= @record.state.to_s %>
 </p>
 
 <p>
   <strong>Objective:</strong>
-  <%= @record.objective %>
+  <%= @record.objective.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_record_path(@record) %> |
 <%= link_to 'Back', records_path %>
-<%= link_to "PDF", records_path (@record, format: "pdf")%>
-</body>
-</html>
+</table>
+
+<p><%= link_to "PDF", record_path(@record, format: "pdf")%></p>

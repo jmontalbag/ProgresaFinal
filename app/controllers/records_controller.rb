@@ -13,7 +13,7 @@ class RecordsController < ApplicationController
     respond_to do |format|
      format.html
      format.pdf do
-       pdf = OrderPDfs.new
+       pdf = RecordPdf.new(@record)
        send_data pdf.render, filename: "Historial_#{@record.beneficiary.nombre}.pdf",
                               type: "application/pdf",
                               disposition: "inline"
