@@ -7,12 +7,12 @@
 
 <p>
   <strong>Zone:</strong>
-  <%= @objective.zone %>
+  <%= @objective.zone.nombre %>
 </p>
 
 <p>
   <strong>Classification:</strong>
-  <%= @objective.classification %>
+  <%= @objective.classification.nombre %>
 </p>
 
 <%= link_to 'Edit', edit_objective_path(@objective) %> |

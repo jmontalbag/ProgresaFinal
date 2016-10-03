@@ -1,8 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% content_for :content_header do %>
+    <section class="content-header">
+      <p id="notice"><%= notice %></p>
+      <div class="row">
+        <h1>Historial</h1>
+      </div>
+    </section>
+<% end %>
 
-<h1>Records</h1>
-
-<table>
+<section class="content invoice">
+<div class="table-responsive">
+<table border="1" class="table table-striped">
   <thead>
     <tr>
       <th>Usuario</th>
@@ -16,18 +23,19 @@
   <tbody>
     <% @records.each do |record| %>
       <tr>
-        <td><%= record.user %></td>
-        <td><%= record.beneficiary %></td>
-        <td><%= record.state %></td>
-        <td><%= record.objective %></td>
-        <td><%= link_to 'Show', record %></td>
-        <td><%= link_to 'Edit', edit_record_path(record) %></td>
-        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= record.users %></td>
+        <td><%= record.beneficiary.nombre %></td>
+        <td><%= record.state.nombre %></td>
+        <td><%= record.objective.texto %></td>
+        <td><%= link_to 'Mostrar', record %></td>
+        <td><%= link_to 'Editar', edit_record_path(record) %></td>
+        <td><%= link_to 'Eliminar', record, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
+</section>
 <br>
 
-<%= link_to 'New Record', new_record_path %>
+<%= link_to 'Nuevo Historial', new_record_path %>
