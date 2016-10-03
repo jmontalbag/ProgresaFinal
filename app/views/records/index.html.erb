@@ -25,9 +25,16 @@
   </thead>
 
   <tbody>
+    <input type="text" id="busqueda" />
+    <div id="resultado"></div>
+    
     <% @records.each do |record| %>
       <tr>
+<<<<<<< HEAD
         <td><%= record.user.nombre %></td>
+=======
+        <td><%= record.user %></td>
+>>>>>>> 81b014aef9b40a902670bd55a9d2b7177738e5c2
         <td><%= record.beneficiary.nombre %></td>
         <td><%= record.state.nombre %></td>
         <td><%= record.objective.texto %></td>

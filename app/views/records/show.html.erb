@@ -28,7 +28,13 @@
   <%= @record.objective %>
 </p>
 
+<<<<<<< HEAD
 <%= link_to 'Editar', edit_record_path(@record) %> |
 <%= link_to 'Volver', records_path %>
+=======
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>
+<%= link_to "PDF", records_path (@record, format: "pdf")%>
+>>>>>>> 81b014aef9b40a902670bd55a9d2b7177738e5c2
 </body>
 </html>
