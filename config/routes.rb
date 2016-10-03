@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :classifications
   resources :zones
 
-  
 
   get 'welcome/index'
 

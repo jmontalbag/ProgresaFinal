@@ -1,5 +1,6 @@
 class ClassificationsController < ApplicationController
   before_action :set_classification, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:update,:mostrar,:index,:crear,:eliminar,:editar,:nuevo]
 
   # GET /classifications
   # GET /classifications.json

@@ -1,5 +1,6 @@
 class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:update,:mostrar,:index,:crear,:eliminar,:editar,:nuevo]
 
   # GET /objectives
   # GET /objectives.json
