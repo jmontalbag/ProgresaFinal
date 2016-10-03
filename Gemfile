@@ -32,6 +32,7 @@ gem 'rails_admin', '~>1.0'
 gem 'adminlte-generators'
 gem 'devise'
 gem 'adminlte-rails'
+gem "font-awesome-rails"
 
 
 

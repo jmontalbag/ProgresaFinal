@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :objectives
   resources :classifications
   resources :zones
+
+  
+
   get 'welcome/index'
 
   get 'beneficiaries/', to:'beneficiaries#index', as:'beneficiarios'
