@@ -30,5 +30,6 @@
 
 <%= link_to 'Edit', edit_record_path(@record) %> |
 <%= link_to 'Back', records_path %>
+<%= link_to "PDF", records_path (@record, format: "pdf")%>
 </body>
 </html>

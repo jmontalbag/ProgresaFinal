@@ -21,6 +21,9 @@
   </thead>
 
   <tbody>
+    <input type="text" id="busqueda" />
+    <div id="resultado"></div>
+    
     <% @records.each do |record| %>
       <tr>
         <td><%= record.user %></td>
