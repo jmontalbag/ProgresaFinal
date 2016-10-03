@@ -22,16 +22,14 @@
   <%= @record.objective.to_s %>
 </p>
 
-<<<<<<< HEAD
 <%= link_to 'Edit', edit_record_path(@record) %> |
 <%= link_to 'Back', records_path %>
 </table>
 
 <p><%= link_to "PDF", record_path(@record, format: "pdf")%></p>
-=======
+
 <%= link_to 'Editar', edit_record_path(@record) %> |
 <%= link_to 'Volver', records_path %>
-<%= link_to "PDF", record_path (@record, format: "pdf")%>
+<%= link_to "PDF", record_path(@record, format: "pdf")%>
 </body>
 </html>
->>>>>>> 0e0d4050e1c1a41b3604e7da69a90b096136e0ad
