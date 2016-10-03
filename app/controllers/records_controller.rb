@@ -10,6 +10,7 @@ class RecordsController < ApplicationController
   # GET /records/1
   # GET /records/1.json
   def show
+    
   end
 
   # GET /records/new

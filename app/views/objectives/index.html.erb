@@ -1,14 +1,26 @@
-<p id="notice"><%= notice %></p>
+<% content_for :content_header do %>
+    <section class="content-header">
+      <p id="notice"><%= notice %></p>
+      <div class="row">
+        <h1>Objectivos</h1>
+      </div>
+      <div class="row">
+        <span class="pull-left glyphicon glyphicon-plus"><%= link_to 'Crear Objetivo', new_objective_path %></span>
+      </div>
+    </section>
+<% end %>
 
-<h1>Objectives</h1>
-
-<table>
+<section class="content invoice">
+<div class="table-responsive">
+<table border="1" class="table table-striped" >
   <thead>
     <tr>
       <th>Texto</th>
-      <th>Zone</th>
-      <th>Classification</th>
-      <th colspan="3"></th>
+      <th>Area</th>
+      <th>Clasificación</th>
+      <th>Mostrar</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
 
@@ -16,16 +28,14 @@
     <% @objectives.each do |objective| %>
       <tr>
         <td><%= objective.texto %></td>
-        <td><%= objective.zone %></td>
-        <td><%= objective.classification %></td>
-        <td><%= link_to 'Show', objective %></td>
-        <td><%= link_to 'Edit', edit_objective_path(objective) %></td>
-        <td><%= link_to 'Destroy', objective, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= objective.zone.nombre %></td>
+        <td><%= objective.classification.nombre %></td>
+        <td><%= link_to 'Mostrar', objective %></td>
+        <td><%= link_to 'Editar', edit_objective_path(objective) %></td>
+        <td><%= link_to 'Eliminar', objective, method: :delete, data: { confirm: '¿Esta seguro de eliminar este objetivo?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Objective', new_objective_path %>
+</div>
+</section>
