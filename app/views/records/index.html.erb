@@ -19,6 +19,7 @@
       <th>Beneficiario</th>
       <th>Estado</th>
       <th>Objetivo</th>
+      <th>Generar PDF</th>
       <th>Editar</th>
       <th>Eliminar</th>
     </tr>
@@ -30,19 +31,13 @@
     
     <% @records.each do |record| %>
       <tr>
-        <td><%= record.user %></td>
+        <td><%= record.user.nombre %></td>
         <td><%= record.beneficiary.nombre %></td>
         <td><%= record.state.nombre %></td>
         <td><%= record.objective.texto %></td>
-<<<<<<< HEAD
-        <td><%= link_to 'Mostrar', record %></td>
-        <td><%= link_to 'Editar', edit_record_path(record) %></td>
-        <td><%= link_to 'Eliminar', record, method: :delete, data: { confirm: '¿Estas seguro? '} %> </td>
-         <td><%= link_to "PDF", record_path(record, format: "pdf")%></td>
-=======
+        <td><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><%= link_to "PDF", record_path(record, format: "pdf")%></td>
         <td><span class="glyphicon glyphicon-pencil" aria-hidden="true"><%= link_to 'Editar', edit_record_path(record) %></td>
         <td><span class="glyphicon glyphicon-trash" aria-hidden="true"><%= link_to 'Eliminar', record, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
->>>>>>> 0e0d4050e1c1a41b3604e7da69a90b096136e0ad
       </tr>
     <% end %>
   </tbody>
