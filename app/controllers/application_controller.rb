@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  layout :manejo_vista_admin
 
 layout :manejo_vista_admin
 

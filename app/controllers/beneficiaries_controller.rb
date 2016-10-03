@@ -1,5 +1,6 @@
 class BeneficiariesController < ApplicationController
   before_action :set_beneficiary, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:update,:mostrar,:index,:crear,:eliminar,:editar,:nuevo]
 
   # GET /beneficiaries
   # GET /beneficiaries.json
